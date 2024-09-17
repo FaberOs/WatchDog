@@ -1,10 +1,10 @@
-package com.unicauca.watchdog.ddd;
+package com.unicauca.whatchdog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DddApplicationTests {
+class WhatchdogApplicationTests {
 
 	@Test
 	void contextLoads() {

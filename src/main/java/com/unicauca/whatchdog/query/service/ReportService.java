@@ -1,14 +1,16 @@
-package com.unicauca.watchdog.ddd.query.service;
+package com.unicauca.whatchdog.query.service;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.unicauca.watchdog.ddd.query.model.Report;
-import com.unicauca.watchdog.ddd.query.repository.ReportRepository;
+import com.unicauca.whatchdog.query.Model.Report;
+import com.unicauca.whatchdog.query.repository.ReportRepository;
 
 @Service
 public class ReportService {
+
     @Autowired
     ReportRepository reportRepository;
 

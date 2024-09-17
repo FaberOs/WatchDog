@@ -1,13 +1,13 @@
-package com.unicauca.watchdog.ddd;
+package com.unicauca.whatchdog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DddApplication {
+public class WhatchdogApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DddApplication.class, args);
+		SpringApplication.run(WhatchdogApplication.class, args);
 	}
 
 }
