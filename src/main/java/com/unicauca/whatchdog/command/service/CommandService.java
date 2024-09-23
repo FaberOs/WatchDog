@@ -25,7 +25,7 @@ public class CommandService {
     }
 
     public void updateReport(String id, ReportCommand report) {
-        ReportCommand reportCommand = reportCommandRepository.findById(Long.valueOf(id))
+        ReportCommand reportCommand = reportCommandRepository.findById(String.valueOf(id))
             .orElseThrow(() -> new IllegalArgumentException("Report not found"));
         reportCommand.setContent(report.getContent());
         reportCommand.setFechaCreacion(report.getFechaCreacion());
@@ -34,6 +34,6 @@ public class CommandService {
     }
 
     public void deleteReport(String id) {
-        reportCommandRepository.deleteById(Long.valueOf(id));
+        reportCommandRepository.deleteById(String.valueOf(id));
     }
 }
