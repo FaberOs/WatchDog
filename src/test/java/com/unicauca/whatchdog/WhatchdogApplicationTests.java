@@ -8,6 +8,10 @@ class WhatchdogApplicationTests {
 
 	@Test
 	void contextLoads() {
+
+		// Test para comprobar metodos del paquete command
+
+		
 	}
 
 }
