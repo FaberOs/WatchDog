@@ -1,4 +1,4 @@
-package com.unicauca.whatchdog.TestService;
+package com.unicauca.whatchdog.ServiceTest;
 
 import java.util.Optional;
 
@@ -27,20 +27,20 @@ public class ReportQueryService {
         private ReportRepository reportRepository;
 
         @Test
-        void shouldReturnReportSuccessfully() {
+        void returnReportSuccessfully() {
             // Arrange
             Report report = new Report();
-            report.setId("123");
-            report.setContent("Sample content");
+            report.setId("R123");
+            report.setContent("Contenido del reporte");
 
-            when(reportRepository.findById("123")).thenReturn(Optional.of(report));
+            when(reportRepository.findById("R123")).thenReturn(Optional.of(report));
 
             // Act
-            Report result = reportService.getReport("123");
+            Report result = reportService.getReport("R123");
 
             // Assert
             assertNotNull(result);
-            assertEquals("123", result.getId());
-            verify(reportRepository, times(1)).findById("123");
+            assertEquals("R123", result.getId());
+            verify(reportRepository, times(1)).findById("R123");
     }
 }

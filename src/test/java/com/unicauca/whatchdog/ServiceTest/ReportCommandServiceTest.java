@@ -1,4 +1,4 @@
-package com.unicauca.whatchdog.TestService;
+package com.unicauca.whatchdog.ServiceTest;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -34,6 +34,7 @@ public class ReportCommandServiceTest {
     void createReportSuccessfully() {
         // Arrange
         ReportCommand report = new ReportCommand();
+        report.setId("R123");
         report.setContent("Contenido del Reporte");
         report.setFechaCreacion(LocalDateTime.now());
         report.setFotoUrl("http://fotoReporte.com/photo.jpg");
@@ -74,8 +75,5 @@ public class ReportCommandServiceTest {
 
         // Assert
         verify(reportCommandRepository, times(1)).deleteById("R123");
-        // Additional asserts if needed
-        // Example: verify that a specific method was called with the expected arguments
-        // verify(mockService, times(1)).methodToCall(any(Argument1.class), any(Argument2.class));
     }
 }
